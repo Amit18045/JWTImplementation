@@ -27,16 +27,9 @@ namespace JWTImplementation.Controllers
         [HttpPost("AddUser")]
         public User AddUser([FromBody] User user)
         {
-            var users = _authServices.AddUser(user);
+            var users=_authServices.AddUser(user);
 
             return users;
         }
-            [HttpPost("testCommit")]
-            public User testCommit([FromBody] User user)
-            {
-                var users = _authServices.AddUser(user);
-
-                return users;
-            }
-        }
+    }
 }
